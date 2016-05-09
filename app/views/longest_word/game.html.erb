@@ -1,0 +1,14 @@
+<div class="container" style='text-align:center; padding: 100px 300px'>
+  <p>******** Welcome to the longest word-game !********</p>
+  <p>Here's your grid :</p>
+  <p style="color: red"><%= @grid.join("")%></p>
+  <p>What's your best shot ?</p>
+
+  <form action="/score" method="GET">
+    <input type="text" name="guess">
+    <input type="hidden" name="start_time" value="<%=@start_time%>">
+    <input type="hidden" name="grid" value="<%=@grid.join("")%>">
+    <input type="submit" value="GO !">
+  </form>
+</div>
+
